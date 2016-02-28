@@ -61,7 +61,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CastExtensions.csproj">
+    <ProjectReference Include="..\CastExtensions\CastExtensions.csproj">
       <Project>{618c0633-33ae-4f58-8b12-f49feaf29558}</Project>
       <Name>CastExtensions</Name>
     </ProjectReference>

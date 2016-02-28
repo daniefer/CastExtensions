@@ -2,8 +2,9 @@ using System;
 
 namespace CastExtensions.Structs
 {
-    public static class DecimalToIntExtensions
+    public static class IntExtensions
     {
+        #region decimal
         public static short ToShort(this decimal input)
         {
             return decimal.ToInt16(input);
@@ -96,5 +97,22 @@ namespace CastExtensions.Structs
         {
             return input.ToUIntPtr();
         }
+        #endregion
+
+        #region float
+
+        public static short ToShort(this float input)
+        {
+            if (input > short.MaxValue)
+            {
+                return short.MaxValue;
+            }
+            if (input < short.MinValue)
+            {
+                return short.MinValue;
+            }
+            return Convert.ToInt16(input);
+        }
+        #endregion
     }
 }
